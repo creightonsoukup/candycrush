@@ -4,12 +4,18 @@ var store1 = require('./store1-data.js');
 
 // How would you access the value '4.63' from store1?
 
+console.log(store1["2015-01-08"][0][1])
+
 
 // How would you access how many 'Mint Wafers' were sold on January 7th?
 
+console.log(store1["2015-01-07"]);
 
 // Produce an array of the date keys in store1's data.
 
+var keys = [store1.keys()]
+
+console.log(keys)
 
 // *********** LOOPING OVER DATA *********** \\
 
