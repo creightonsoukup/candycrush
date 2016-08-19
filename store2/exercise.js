@@ -35,15 +35,27 @@ console.log("--------")
 
 // Iterate over the store2 sale dates for Caramel Twists. Use this to create an object containing dates as the key and the value as the quantity sold on that day.
 
+var caramelSaleDates = {}
+caramelDates = store2['sale dates']['Caramel Twists']
+for (var i = 0; i < caramelDates.length; i++) {
+  caramelSaleDates[caramelDates[i]] = 1 + (caramelSaleDates[caramelDates[i]] || 0);
+}
 
-
+console.log(caramelSaleDates)
 console.log("--------")
 
 
 // Iterate over store2's sale dates data to find which day had the most total number of sales. How did you calculate this?
 
+var totalSales = {}
+var keys = store2['sale dates']
+for (var prop in store2['sale dates']) {
+  for (var i = 0; i < store2['sale dates'][prop].length; i++) {
+    totalSales[store2['sale dates'][prop][i]] = 1 + (totalSales[store2['sale dates'][prop][i]] || 0);
+  }
 
-
+}
+ console.log(totalSales)
 
 console.log("--------")
 
